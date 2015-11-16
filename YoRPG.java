@@ -80,19 +80,51 @@ public class YoRPG {
 	    s += "\t1: The Blade (Warrior)\n";
 	    s += "\t2: The Stave (Mage)\n";
 	    s += "\t3: The Dagger (Rogue)\n";
-	    s += "\t4: The Blade (Warrior)\n"; // CHANGE THIS - ZZ
-	    s += "\t5: The Blade (Warrior)\n"; // CHANGE THIS - ZZ
+	    s += "\t4: The Bow (Ranger)\n";
+	    s += "\t5: The Wand (Wonderworker)\n";
 	    s += "Selection: ";
 	    System.out.print(s);
 	    try {
 		charClass = Integer.parseInt(in.readLine());
-		if (charClass == 1) {pat = new Warrior(name); choosingClass = false;}
-		if (charClass == 2) {pat = new Mage(name); choosingClass = false;}
-		if (charClass == 3) {pat = new Rogue(name); choosingClass = false;}
-		//if (charClass == 4) {pat = new _(name); choosingClass = false;}
-		//if (charClass == 5) {pat = new _(name); choosingClass = false;}
-		if (choosingClass) {
-		    System.out.println("Please choose a valid class!\n");
+		if (charClass == 1) {
+		    pat = new Warrior(name);
+		    System.out.print(pat.about() + "\nChoose this class? (Y/N):");
+		    String choice = (in.readLine().toLowerCase());
+		    if (choice.equals("y")) {
+			choosingClass = false;
+		    }
+		}
+		if (charClass == 2) {
+		    pat = new Mage(name);
+		    System.out.print(pat.about() + "\nChoose this class? (Y/N):");
+		    String choice = (in.readLine().toLowerCase());
+		    if (choice.equals("y")) {
+			choosingClass = false;
+		    }
+		}
+		if (charClass == 3) {
+		    pat = new Rogue(name);
+		    System.out.print(pat.about() + "\nChoose this class? (Y/N):");
+		    String choice = (in.readLine().toLowerCase());
+		    if (choice.equals("y")) {
+			choosingClass = false;
+		    }
+		}
+		if (charClass == 4) {
+		    pat = new Archer(name);
+		    System.out.print(pat.about() + "\nChoose this class? (Y/N):");
+		    String choice = (in.readLine().toLowerCase());
+		    if (choice.equals("y")) {
+			choosingClass = false;
+		    }
+		}
+		if (charClass == 5) {
+		    pat = new WonderWorker(name);
+		    System.out.print(pat.about() + "\nChoose this class? (Y/N):");
+		    String choice = (in.readLine().toLowerCase());
+		    if (choice.equals("y")) {
+			choosingClass = false;
+		    }
 		}
 	    } catch (Exception ex) {
 		System.out.println("Please choose a valid class!\n\n");
