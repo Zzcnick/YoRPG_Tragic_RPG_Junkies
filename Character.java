@@ -3,7 +3,7 @@
    HW29 -- Ye Olde Role Playing Game, Improved
    2015-11-12 */
 
-public class Character {
+public abstract class Character {
     protected int HP;
     protected int strength;
     protected int defense;
@@ -40,12 +40,7 @@ public class Character {
 	c.lowerHP(damage);
 	return damage;
     }
-    public void specialize() { // To be overridden in each class's file
-	atkRating *= 2;
-	defense -= 20;
-    }
-    public void normalize() { // To be overridden in each class's file
-	atkRating = 0.3;
-	defense = 30;
-    }
+    public abstract void specialize();
+    public abstract void normalize();
+    public abstract String about();
 }

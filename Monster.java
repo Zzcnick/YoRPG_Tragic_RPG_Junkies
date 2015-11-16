@@ -11,6 +11,11 @@ public class Monster extends Character{
 	defense = 20;
 	atkRating = 1;
 	name = "Monster";
-    
+    }
+    public void normalize() {;}
+    public void specialize() {;}
+
+    public String about() {
+	return "Blargh! I am a monster! Fear me!";
     }
 }

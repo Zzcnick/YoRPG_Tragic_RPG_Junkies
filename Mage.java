@@ -29,8 +29,8 @@ public class Mage extends Character {
 
     public String about(){
 	return "The Magical Mystery Mage is waiting to zap you away. " +
-	       "The mage attacks using its extensive arsenel of spells. " + 
-	       "Its spells are much stronger than any sword or dagger, but it takes more damage due to a lack of armor. " + 
-	       "It's pretty hard to read a spell book when you're bogged down by a few pounds of armor.";
+	    "The mage attacks using its extensive arsenel of spells. " + 
+	    "Its spells are much stronger than any sword or dagger, but it takes more damage due to a lack of armor. " + 
+	    "It's pretty hard to read a spell book when you're bogged down by a few pounds of armor.";
     }
 }
